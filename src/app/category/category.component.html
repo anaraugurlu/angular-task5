@@ -1,0 +1,54 @@
+ <!-- <div class="container">
+<div class="row">
+  <div class="col-5 mx-auto">
+    <div class="input-group mb-3">
+      <input
+        #input
+        type="text"
+        class="form-control"
+        (keyup.enter)="addItem(input.value)"
+        input.value=""
+      />
+      <button
+        class="btn btn-outline-primary"
+        (click)="addItem(input.value); input.value = ''"
+      >
+        Add
+      </button>
+    </div>
+    <div class="form-check mb-3">
+    
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody #tbody>
+        <tr
+          (click)="ChangeColor(tbody, tr.style, item)"
+          #tr
+          *ngFor="let item of getItems(); let i = index"
+        >
+          <td>{{ i + 1 }}</td>
+          <td #td>{{ item.description }}</td>
+          <td (click)="ChangeAction(td)" *ngIf="item.action">Yes</td>
+          <td (click)="ChangeAction(td)" *ngIf="!item.action">No</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+</div> 
+ -->
+ <div class="list-group">
+ <a
+   *ngFor="let c of categories"
+   href=""
+   class="list-group-item list-group-item-action active"
+   >{{ c.name }}</a
+ >
+</div>
